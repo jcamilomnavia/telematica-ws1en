@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get -y install apache2
 # El archivo index.html esta dentro del mismo directorio webapp
 COPY index.html /var/www/html/
-# Ademas copiamos el index.js en la misma carpeta, el index.js realizara la conexion a la base de datos
+# Ademas si existe un index.js, se copia en la misma carpeta
 # COPY index.js /var/www/html/
 
 # Configurar apache
